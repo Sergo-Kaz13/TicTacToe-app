@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import GameBoard from "./Components/GameBoard";
 import GameInfo from "./Components/GameInfo";
+import NewGameButton from "./Components/NewGameButton";
 
 function App() {
   const [board, setBoard] = useState(Array(9).fill(null));
@@ -56,6 +57,7 @@ function App() {
     <div className="flex flex-col justify-center items-center gap-5">
       <GameInfo user={user} />
       <GameBoard board={board} onClick={onClick} />
+      <NewGameButton />
     </div>
   );
 }
